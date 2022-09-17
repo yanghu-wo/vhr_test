@@ -18,8 +18,6 @@ public class Test {
 
     public static void main(String[] args) {
         BCrypt();
-        System.out.println("添加一个github分支测试！");
-
     }
 
     public static void BCrypt(){
@@ -31,7 +29,7 @@ public class Test {
 //        String salt = enPass.substring(0,24);
 //        System.out.println(salt);
 ////        Boolean flag = passwordEncoder.matches("$10$r2NjNEsVrdGR.zrtRd74ruZS3B/ZgyUrU4D4MWBoQxMG5Q7Ksd5QG",encode);
-//        String text  = BCrypt.hashpw("123", salt);
+//        String text  = BCrypt.hashpw("123", salt); // 盐值部分，与依赖包的版本相关，vhr 中security的版本为5.4.1，我使用的是2.3.7
 //        System.out.println(text);
 //        System.out.println(text.equals(enPass));
         Boolean flag = passwordEncoder.matches("123","$2a$10$kCLn8P.eBCboeNvEJAPmuu9dU6WBrmEnLFhbcOShp/8p.cfI3UKfi");
