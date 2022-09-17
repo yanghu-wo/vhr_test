@@ -1,0 +1,41 @@
+
+server:
+  port: 8991
+
+datasource:
+  url: localhost:3306/vhr
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${datasource.url}?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&serverTimezone=UTC
+    username: root
+    password: 199615
+    hikari:
+      maximum-pool-size: 15
+      max-lifetime: 1770000
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    password: 199615
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 500
+        min-idle: 50
+        max-active: 1000
+        max-wait: 2000
+  security:
+    user:
+      name: root
+      password: 123456
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.study.entity
+logging:
+  config: logback.xml
+  level:
+    com.study.mapper: trace

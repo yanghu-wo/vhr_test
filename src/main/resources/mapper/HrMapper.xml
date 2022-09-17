@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.vhr.mapper.HrMapper">
+    <!-- 1、增加   -->
+    <insert id="insertHr" parameterType="com.study.vhr.entity.Hr">
+        insert into hr(name,phone,telephone,address,enabled,username,password,userface,remark) values(#{name},#{phone},#{telephone},#{address},#{enabled},#{username},#{password},#{userface},#{remark})
+    </insert>
+    <!--2、删除-->
+    <delete id="delHrById" parameterType="INTEGER">
+        delete from hr where id = #{id};
+    </delete>
+
+    <!--3、查询-->
+    <!-- 3.1、根据id查询用户   -->
+    <select id="findOneHrById" parameterType="INTEGER" resultType="com.study.vhr.entity.Hr">
+        select name,phone,telephone,address,enabled,username,password,userface,remark from hr where id=#{id}
+    </select>
+    <!-- 3.2、查询所有用户   -->
+    <select id="findAllHr" resultType="java.util.List">
+        select * from hr
+    </select>
+    <!-- 3.3、查询用户角色  select r.name,r.nameZh from role r, hr_role hr WHERE r.id=hr.rid AND hr.hrid=(select id from hr WHERE username=#{username})  -->
+    <select id="getHrRoleByName" parameterType="String" resultType="java.util.Set">
+        select r.nameZh from role r, hr_role hr WHERE r.id=hr.rid AND hr.hrid=(select id from hr WHERE username=#{username})
+    </select>
+    <!-- 3.4、查询用户权限  -->
+    <select id="getHrPermissions" parameterType="String" resultType="java.util.Set">
+        select m.url from menu m, menu_role mr WHERE m.id=mr.mid and mr.rid=(select hl.rid from hr,hr_role hl where hr.id=hl.hrid and hr.username=#{username})
+    </select>
+    <!-- 3.5、根据用户名查询用户   -->
+    <select id="findOneHrByUserName" parameterType="String" resultType="com.study.vhr.entity.Hr">
+        select username,password from hr where username=#{username}
+    </select>
+
+
+
+    <!-- 修改   -->
+    <update id="updateHrInfo" parameterType="com.study.vhr.entity.Hr">
+        update hr set name=#{name},phone=#{phone},telephone=#{telephone},address=#{address},enabled=#{enabled},username=#{username},password=#{password},userface=#{userface},remark=#{remark}
+    </update>
+</mapper>

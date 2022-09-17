@@ -1,0 +1,384 @@
+22:50:36.917 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 23320 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+22:50:36.920 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+22:50:37.902 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+22:50:37.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+22:50:37.909 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+22:50:37.909 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+22:50:38.028 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+22:50:38.028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 1063 ms
+22:50:38.431 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+22:50:38.448 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+22:50:38.455 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 2.012 seconds (JVM running for 3.812)
+22:50:44.809 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:50:44.810 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+22:50:44.813 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 3 ms
+22:50:44.873 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findHr，在该方法执行之前执行====
+22:50:44.899 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+22:50:45.149 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+22:50:45.156 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==>  Preparing: select * from hr where id=?
+22:50:45.175 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==> Parameters: 3(Integer)
+22:50:45.191 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==    Columns: id, name, phone, telephone, address, enabled, username, password, userface, remark
+22:50:45.192 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==        Row: 3, 系统管理员, 18568887789, 029-82881234, 深圳南山, 1, admin, $2a$10$aDPBaHNJRc9FSoQGVnCL/uOYai24tlMSC9.qRzV.FnaoUczxJpjki, http://bpic.588ku.com/element_pic/01/40/00/64573ce2edc0728.jpg, null
+22:50:45.193 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  <==      Total: 1
+22:50:45.209 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+22:50:45.210 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+22:50:50.949 [http-nio-8991-exec-2] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findAll，在该方法执行之前执行====
+22:51:41.240 [main] ERROR o.s.boot.SpringApplication  -  Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:368)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:335)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.study.VhrTestApplication.main(VhrTestApplication.java:13)
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:322)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:195)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88)
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319)
+	... 19 common frames omitted
+23:04:01.639 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 17872 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+23:04:01.661 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+23:04:03.161 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+23:04:03.170 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+23:04:03.203 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+23:04:03.204 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+23:04:03.298 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+23:04:03.299 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 1573 ms
+23:04:03.939 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+23:04:03.955 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+23:04:03.968 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 2.975 seconds (JVM running for 4.025)
+23:04:32.609 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:04:32.609 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:04:32.614 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:04:32.614 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+23:04:32.619 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 5 ms
+23:04:32.698 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findHr，在该方法执行之前执行====
+23:04:32.726 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+23:04:33.110 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+23:04:33.116 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==>  Preparing: select * from hr where id=?
+23:04:33.136 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==> Parameters: 5(Integer)
+23:04:33.215 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==    Columns: id, name, phone, telephone, address, enabled, username, password, userface, remark
+23:04:33.216 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==        Row: 5, 李白, 18568123489, 029-82123434, 海口美兰, 1, libai, $2a$10$oE39aG10kB/rFu2vQeCJTu/V/v4n6DRR0f8WyXRiAYvBpmadoOBE., https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514093920321&di=913e88c23f382933ef430024afd9128a&imgtype=0&src=http%3A%2F%2Fp.3761.com%2Fpic%2F9771429316733.jpg, null
+23:04:33.217 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  <==      Total: 1
+23:04:33.242 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+23:04:33.242 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+23:04:33.243 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:04:33.244 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/hr/find
+23:04:33.653 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request end
+23:04:33.653 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:04:33.654 [http-nio-8991-exec-3] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findHr，在该方法执行之前执行====
+23:04:33.655 [http-nio-8991-exec-3] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==>  Preparing: select * from hr where id=?
+23:04:33.656 [http-nio-8991-exec-3] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==> Parameters: 3(Integer)
+23:04:33.658 [http-nio-8991-exec-3] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==    Columns: id, name, phone, telephone, address, enabled, username, password, userface, remark
+23:04:33.658 [http-nio-8991-exec-3] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==        Row: 3, 系统管理员, 18568887789, 029-82881234, 深圳南山, 1, admin, $2a$10$aDPBaHNJRc9FSoQGVnCL/uOYai24tlMSC9.qRzV.FnaoUczxJpjki, http://bpic.588ku.com/element_pic/01/40/00/64573ce2edc0728.jpg, null
+23:04:33.659 [http-nio-8991-exec-3] DEBUG c.s.mapper.HrMapper.findOneHrById  -  <==      Total: 1
+23:04:33.660 [http-nio-8991-exec-3] INFO  com.study.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+23:04:33.660 [http-nio-8991-exec-3] INFO  com.study.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+23:04:33.661 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:04:33.661 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/hr/find
+23:05:17.566 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request end
+23:05:17.566 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:05:17.567 [http-nio-8991-exec-7] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findAll，在该方法执行之前执行====
+23:05:17.567 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:05:17.567 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/hr/findAll
+23:20:08.763 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 3944 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+23:20:08.822 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+23:20:11.039 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+23:20:11.049 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+23:20:11.049 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+23:20:11.050 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+23:20:11.133 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+23:20:11.133 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2190 ms
+23:20:12.202 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+23:20:12.473 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+23:20:12.501 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+23:20:12.502 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+23:20:12.529 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+23:20:12.563 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+23:20:12.746 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 5.391 seconds (JVM running for 6.697)
+23:20:24.780 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:20:24.780 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:20:24.785 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:20:24.785 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+23:20:24.796 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 10 ms
+23:20:24.808 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：findHr，在该方法执行之前执行====
+23:20:24.836 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  ====doBefore方法进入了====
+23:20:24.837 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  即将执行方法为: findHr，属于com.study.controller.HrController包
+23:20:24.838 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/hr/find，ip地址为：0:0:0:0:0:0:0:1
+23:20:24.868 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+23:20:25.252 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+23:20:25.258 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==>  Preparing: select * from hr where id=?
+23:20:25.278 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  ==> Parameters: 5(Integer)
+23:20:25.328 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==    Columns: id, name, phone, telephone, address, enabled, username, password, userface, remark
+23:20:25.328 [http-nio-8991-exec-1] TRACE c.s.mapper.HrMapper.findOneHrById  -  <==        Row: 5, 李白, 18568123489, 029-82123434, 海口美兰, 1, libai, $2a$10$oE39aG10kB/rFu2vQeCJTu/V/v4n6DRR0f8WyXRiAYvBpmadoOBE., https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514093920321&di=913e88c23f382933ef430024afd9128a&imgtype=0&src=http%3A%2F%2Fp.3761.com%2Fpic%2F9771429316733.jpg, null
+23:20:25.330 [http-nio-8991-exec-1] DEBUG c.s.mapper.HrMapper.findOneHrById  -  <==      Total: 1
+23:20:25.333 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  方法findHr执行完毕，返回参数为：成功
+23:20:25.333 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  对返回参数进行业务上的增强：成功增强版
+23:20:25.334 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  ====doAfter方法进入了====
+23:20:25.334 [http-nio-8991-exec-1] INFO  com.study.handler.LogAspectHandler  -  方法findHr已经执行完
+23:20:25.365 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+23:20:25.365 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+23:20:25.367 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:20:25.367 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/hr/find
+23:21:35.701 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request end
+23:21:35.701 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:21:35.803 [http-nio-8991-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+23:21:35.809 [http-nio-8991-exec-5] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：errorHtml，在该方法执行之前执行====
+23:21:35.811 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:21:35.811 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-ui.html
+23:25:11.219 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 10456 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+23:25:11.242 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+23:25:13.897 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+23:25:13.904 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+23:25:13.904 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+23:25:13.905 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+23:25:14.005 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+23:25:14.005 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2563 ms
+23:25:15.493 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+23:25:15.865 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+23:25:15.894 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+23:25:15.895 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+23:25:15.943 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+23:25:16.006 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+23:25:16.249 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 5.952 seconds (JVM running for 8.976)
+23:25:24.015 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:25:24.016 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:25:24.022 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:25:24.022 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+23:25:24.035 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 13 ms
+23:25:24.105 [http-nio-8991-exec-1] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：errorHtml，在该方法执行之前执行====
+23:25:24.123 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:25:24.124 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-ui.html
+23:25:49.317 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request end
+23:25:49.318 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:25:49.320 [http-nio-8991-exec-3] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：errorHtml，在该方法执行之前执行====
+23:25:49.321 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:25:49.322 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-ui.html
+23:31:28.277 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 17912 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+23:31:28.303 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+23:31:30.948 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+23:31:30.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+23:31:30.971 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+23:31:30.971 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+23:31:31.241 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+23:31:31.242 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2891 ms
+23:31:33.148 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+23:31:33.582 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+23:31:33.706 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+23:31:33.707 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+23:31:33.771 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+23:31:33.858 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+23:31:34.178 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 6.484 seconds (JVM running for 8.004)
+23:31:39.291 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.291 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.296 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:31:39.297 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+23:31:39.311 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 14 ms
+23:31:39.432 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.432 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-ui.html
+23:31:39.484 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.484 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.489 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.489 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.517 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.517 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.517 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.517 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/springfox.css
+23:31:39.517 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.517 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.517 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.517 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.540 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.541 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/swagger-ui.css
+23:31:39.555 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.555 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/springfox.js
+23:31:39.569 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.569 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js
+23:31:39.616 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.616 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/swagger-ui-bundle.js
+23:31:39.874 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.874 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.926 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.926 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:39.928 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.928 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/favicon-32x32.png
+23:31:39.975 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:39.975 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-resources/configuration/ui
+23:31:39.999 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:39.999 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.005 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.006 [http-nio-8991-exec-4] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-resources/configuration/security
+23:31:40.011 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.011 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.016 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.016 [http-nio-8991-exec-3] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/swagger-resources
+23:31:40.048 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.048 [http-nio-8991-exec-8] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.048 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.048 [http-nio-8991-exec-8] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.069 [http-nio-8991-exec-2] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.070 [http-nio-8991-exec-2] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.072 [http-nio-8991-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+23:31:40.078 [http-nio-8991-exec-8] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+23:31:40.079 [http-nio-8991-exec-8] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.079 [http-nio-8991-exec-8] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/
+23:31:40.085 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.086 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.087 [http-nio-8991-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+23:31:40.088 [http-nio-8991-exec-5] INFO  com.study.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+23:31:40.088 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.088 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/csrf
+23:31:40.092 [http-nio-8991-exec-2] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.093 [http-nio-8991-exec-2] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+23:31:40.240 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.240 [http-nio-8991-exec-6] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/v2/api-docs
+23:31:40.341 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.341 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.341 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.341 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.342 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:40.342 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:40.346 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.346 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.346 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:40.346 [http-nio-8991-exec-7] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+23:31:40.346 [http-nio-8991-exec-9] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+23:31:40.346 [http-nio-8991-exec-1] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+23:31:44.342 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:44.342 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:44.344 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:44.344 [http-nio-8991-exec-10] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2
+23:31:46.230 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request end
+23:31:46.230 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request域中保存的name值为：null
+23:31:46.232 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  session id为：null
+23:31:46.232 [http-nio-8991-exec-5] INFO  c.s.l.MyServletRequestListener  -  request url为：http://localhost:8991/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2

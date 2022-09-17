@@ -1,0 +1,1229 @@
+11:59:26.646 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 18816 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+11:59:26.649 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+11:59:28.401 [main] WARN  o.m.s.mapper.ClassPathMapperScanner  -  No MyBatis mapper was found in '[com.study.mapper]' package. Please check your configuration.
+11:59:28.993 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:59:29.006 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+11:59:29.015 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext  -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'shiroFilter' defined in class path resource [com/study/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'shiroFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in class path resource [com/study/config/ShiroConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.shiro.web.mgt.DefaultWebSecurityManager]: Factory method 'securityManager' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getUserRealm': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+11:59:29.022 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:59:29.127 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:59:29.146 [main] ERROR o.s.boot.SpringApplication  -  Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'shiroFilter' defined in class path resource [com/study/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'shiroFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in class path resource [com/study/config/ShiroConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.shiro.web.mgt.DefaultWebSecurityManager]: Factory method 'securityManager' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getUserRealm': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:799)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:540)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:241)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:723)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.study.VhrTestApplication.main(VhrTestApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in class path resource [com/study/config/ShiroConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.shiro.web.mgt.DefaultWebSecurityManager]: Factory method 'securityManager' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getUserRealm': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:886)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:790)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.shiro.web.mgt.DefaultWebSecurityManager]: Factory method 'securityManager' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getUserRealm': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getUserRealm': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334)
+	at com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f.getUserRealm(<generated>)
+	at com.study.config.ShiroConfig.securityManager(ShiroConfig.java:33)
+	at com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f.CGLIB$securityManager$0(<generated>)
+	at com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f$$FastClassBySpringCGLIB$$990adc47.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$c537654f.securityManager(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hrServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.study.vhr.mapper.HrMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1717)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 72 common frames omitted
+12:01:05.483 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 6344 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:01:05.510 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:01:07.643 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$a6172849] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.656 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:01:07.689 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.710 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1e21441b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.717 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.726 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.768 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.787 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.951 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.958 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.965 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.969 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.977 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:07.978 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:08.424 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:01:08.428 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:01:08.445 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:01:08.938 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:01:09.013 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:01:09.014 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:01:09.014 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:01:09.092 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:01:09.092 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 3511 ms
+12:01:09.789 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:01:10.161 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:01:10.190 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:01:10.191 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:01:10.216 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:01:10.256 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:01:10.289 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 5.623 seconds (JVM running for 6.938)
+12:01:36.262 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:01:36.264 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:01:36.274 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:01:36.274 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:01:36.350 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 76 ms
+12:01:36.427 [http-nio-8991-exec-1] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：findHr，在该方法执行之前执行====
+12:01:36.541 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+12:01:37.060 [http-nio-8991-exec-1] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+12:01:37.314 [http-nio-8991-exec-1] INFO  c.s.config.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+12:01:37.314 [http-nio-8991-exec-1] INFO  c.s.config.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+12:01:37.317 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:01:37.318 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/hr/find
+12:01:37.476 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:01:37.476 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:01:37.596 [http-nio-8991-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:01:37.601 [http-nio-8991-exec-2] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:01:37.603 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:01:37.603 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:01:39.844 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:01:39.844 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:01:39.847 [http-nio-8991-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:01:39.879 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：errorHtml，在该方法执行之前执行====
+12:01:39.880 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:01:39.880 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/
+12:01:43.576 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:01:43.576 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:01:44.095 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:01:44.095 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:01:44.247 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:01:44.247 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:01:44.248 [http-nio-8991-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:01:44.249 [http-nio-8991-exec-6] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:01:44.250 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:01:44.250 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:02:21.507 [http-nio-8991-exec-8] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:02:21.511 [http-nio-8991-exec-8] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:02:21.523 [http-nio-8991-exec-8] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:02:21.532 [http-nio-8991-exec-8] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:02:21.533 [http-nio-8991-exec-8] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:02:21.589 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:02:21.589 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:02:21.597 [http-nio-8991-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:02:21.602 [http-nio-8991-exec-9] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:02:21.603 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:02:21.604 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:05:41.627 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 6492 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:05:41.630 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:05:43.331 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$a6172849] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.344 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:05:43.393 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.406 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1e21441b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.422 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.429 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.481 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.500 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.651 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.657 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.664 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.668 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.674 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:43.676 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:44.061 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:05:44.064 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:05:44.082 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:05:44.428 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:05:44.496 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:05:44.497 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:05:44.497 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:05:44.602 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:05:44.602 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2833 ms
+12:05:45.200 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:05:45.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:05:45.505 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:05:45.506 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:05:45.540 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:05:45.568 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:05:45.587 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 4.516 seconds (JVM running for 6.701)
+12:05:53.361 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:05:53.361 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:05:53.366 [http-nio-8991-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:05:53.366 [http-nio-8991-exec-2] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:05:53.382 [http-nio-8991-exec-2] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 16 ms
+12:05:53.410 [http-nio-8991-exec-2] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:05:53.411 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:05:53.412 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:05:53.490 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:05:53.490 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:05:53.585 [http-nio-8991-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:05:53.589 [http-nio-8991-exec-1] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:05:53.590 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:05:53.590 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:09:10.150 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:09:10.150 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:09:10.199 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:09:10.200 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:09:10.201 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:09:10.203 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:09:10.203 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:09:10.203 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:09:10.203 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:09:10.676 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:09:10.676 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:09:10.919 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:09:10.919 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:09:10.921 [http-nio-8991-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:09:10.948 [http-nio-8991-exec-5] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:09:10.948 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:09:10.949 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:09:18.608 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:09:18.608 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:09:18.609 [http-nio-8991-exec-6] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:09:18.609 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:09:18.609 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:09:18.655 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:09:18.656 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:09:18.657 [http-nio-8991-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:09:18.659 [http-nio-8991-exec-7] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:09:18.660 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:09:18.661 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:10:28.842 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:10:28.844 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:10:28.849 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:10:28.849 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:10:28.849 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:10:28.849 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:10:28.850 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:10:28.850 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:10:28.850 [http-nio-8991-exec-9] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:10:28.855 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:10:28.855 [http-nio-8991-exec-9] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:10:29.087 [http-nio-8991-exec-10] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:10:29.087 [http-nio-8991-exec-10] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:10:29.089 [http-nio-8991-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:27)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:10:29.091 [http-nio-8991-exec-10] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:10:29.093 [http-nio-8991-exec-10] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:10:29.094 [http-nio-8991-exec-10] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:11:16.421 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 23116 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:11:16.424 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:11:18.092 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$d178c403] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.112 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:11:18.154 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.167 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4982dfd5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.175 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.185 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.213 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.234 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.389 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.396 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.406 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.410 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.417 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.419 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.831 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:11:18.833 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:11:18.853 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:11:19.264 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:11:19.273 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:11:19.274 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:11:19.274 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:11:19.354 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:11:19.354 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2875 ms
+12:11:20.134 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:11:20.480 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:11:20.530 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:11:20.531 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:11:20.577 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:11:20.615 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:11:20.638 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 4.79 seconds (JVM running for 7.969)
+12:11:33.634 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:11:33.634 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:11:33.642 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:11:33.642 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:11:33.659 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 17 ms
+12:11:33.722 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:11:33.724 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:11:33.724 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:11:33.728 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:11:33.728 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:11:33.728 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:11:33.728 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:11:34.020 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:11:34.021 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:11:34.114 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:11:34.114 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:04.155 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:04.155 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:04.192 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:13:04.192 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:04.193 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:13:04.262 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:04.262 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:04.263 [http-nio-8991-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:13:04.264 [http-nio-8991-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:13:04.290 [http-nio-8991-exec-5] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:13:04.290 [http-nio-8991-exec-3] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:13:04.291 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:04.291 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:04.291 [http-nio-8991-exec-5] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:13:04.291 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:13:16.458 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 10636 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:13:16.461 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:13:17.878 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$759be3c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:17.891 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:13:17.923 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:17.936 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$eda5ff93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:17.951 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:17.958 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:17.984 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.004 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.144 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.150 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.158 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.161 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.167 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.168 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.486 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:13:18.488 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:13:18.504 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:13:18.723 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:13:18.798 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:13:18.799 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:13:18.800 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:13:18.872 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:13:18.872 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2353 ms
+12:13:19.393 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:13:19.659 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:13:19.676 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:13:19.678 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:13:19.690 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:13:19.714 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:13:19.731 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 3.755 seconds (JVM running for 5.069)
+12:13:24.124 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:24.125 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:24.129 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:13:24.129 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:13:24.140 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 11 ms
+12:13:24.183 [http-nio-8991-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:13:24.188 [http-nio-8991-exec-1] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:13:24.190 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:24.191 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:13:24.962 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:24.963 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:24.972 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:13:24.973 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:13:24.973 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:13:24.976 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:13:24.976 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:13:24.976 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:13:24.976 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:13:25.221 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:25.221 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:13:25.304 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:25.305 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:25.307 [http-nio-8991-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:13:25.337 [http-nio-8991-exec-6] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:13:25.338 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:25.338 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:13:36.878 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:36.879 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:36.880 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:13:36.952 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:13:36.953 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.TestController包
+12:13:36.953 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/user/login，ip地址为：0:0:0:0:0:0:0:1
+12:13:36.992 [http-nio-8991-exec-4] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+12:13:37.293 [http-nio-8991-exec-4] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+12:13:37.381 [http-nio-8991-exec-4] INFO  c.s.c.listener.MyHttpSessionListener  -  新用户上线
+12:13:37.411 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:13:37.411 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:13:37.411 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:13:37.411 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:13:37.412 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+12:13:37.413 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+12:13:37.413 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  session id为：null
+12:13:37.413 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:13:37.522 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:13:37.522 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:13:37.524 [http-nio-8991-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:13:37.525 [http-nio-8991-exec-7] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:13:37.527 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  session id为：BDE4707D37FC0E90A70138A1C6556D48
+12:13:37.527 [http-nio-8991-exec-7] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:14:42.875 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 15956 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:14:42.878 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:14:44.011 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$1ad860ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.026 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:14:44.064 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.077 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$92e27c7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.086 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.096 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.126 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.147 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.286 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.292 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.301 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.306 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.312 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.314 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.658 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:14:44.661 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:44.679 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:14:45.016 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:14:45.024 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:14:45.024 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:14:45.024 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:14:45.102 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:14:45.102 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2154 ms
+12:14:45.713 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:14:46.020 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:14:46.047 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:14:46.048 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:14:46.063 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:14:46.095 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:14:46.116 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 3.914 seconds (JVM running for 4.97)
+12:14:50.253 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:14:50.254 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:14:50.259 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:14:50.259 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:14:50.268 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 9 ms
+12:14:50.304 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:14:50.306 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:14:50.306 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:14:50.343 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:14:50.343 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:14:50.343 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:14:50.343 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:14:50.632 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：BDE4707D37FC0E90A70138A1C6556D48
+12:14:50.632 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:14:50.952 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:14:50.953 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:15:14.505 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:15:14.505 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:15:14.506 [http-nio-8991-exec-3] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:15:14.523 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:15:14.523 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.TestController包
+12:15:14.523 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/user/login，ip地址为：0:0:0:0:0:0:0:1
+12:16:16.606 [http-nio-8991-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:16:16.621 [http-nio-8991-exec-2] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:16:16.623 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  session id为：BDE4707D37FC0E90A70138A1C6556D48
+12:16:16.623 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:16:16.635 [http-nio-8991-exec-3] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+12:16:16.812 [http-nio-8991-exec-3] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+12:16:16.888 [http-nio-8991-exec-3] INFO  c.s.c.listener.MyHttpSessionListener  -  新用户上线
+12:16:16.931 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:16:16.932 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:16:16.932 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:16:16.932 [http-nio-8991-exec-3] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:16:16.933 [http-nio-8991-exec-3] INFO  c.s.config.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+12:16:16.938 [http-nio-8991-exec-3] INFO  c.s.config.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+12:16:16.938 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  session id为：BDE4707D37FC0E90A70138A1C6556D48
+12:16:16.938 [http-nio-8991-exec-3] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:16:16.998 [SpringContextShutdownHook] INFO  c.s.c.listener.MyHttpSessionListener  -  用户下线
+12:16:17.075 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Shutdown initiated...
+12:16:17.099 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Shutdown completed.
+12:16:19.730 [main] INFO  com.study.VhrTestApplication  -  Starting VhrTestApplication on DESKTOP-TH53ADD with PID 17296 (E:\IdeaSpace\SpringBoot框架集成\vhr_test\target\classes started by ASUS in E:\IdeaSpace\SpringBoot框架集成\vhr_test)
+12:16:19.734 [main] INFO  com.study.VhrTestApplication  -  No active profile set, falling back to default profiles: default
+12:16:21.148 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'shiroConfig' of type [com.study.config.ShiroConfig$$EnhancerBySpringCGLIB$$7d0f28f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.165 [main] INFO  com.study.config.ShiroConfig  -  ====myRealm注册完成=====
+12:16:21.203 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.215 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f51944cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.223 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.233 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.262 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.282 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.432 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.439 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.449 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.456 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.483 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'hrServiceImpl' of type [com.study.vhr.service.impl.HrServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.485 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'getUserRealm' of type [com.study.config.realm.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.866 [main] INFO  com.study.config.ShiroConfig  -  ====securityManager注册完成====
+12:16:21.870 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  -  Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:16:21.889 [main] INFO  com.study.config.ShiroConfig  -  ====shiroFilterFactoryBean注册完成====
+12:16:22.213 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat initialized with port(s): 8991 (http)
+12:16:22.222 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Initializing ProtocolHandler ["http-nio-8991"]
+12:16:22.223 [main] INFO  o.a.catalina.core.StandardService  -  Starting service [Tomcat]
+12:16:22.223 [main] INFO  o.a.catalina.core.StandardEngine  -  Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:16:22.301 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring embedded WebApplicationContext
+12:16:22.301 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext  -  Root WebApplicationContext: initialization completed in 2493 ms
+12:16:22.911 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping  -  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+12:16:23.288 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8991"]
+12:16:23.315 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port(s): 8991 (http) with context path ''
+12:16:23.316 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Context refreshed
+12:16:23.333 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper  -  Found 1 custom documentation plugin(s)
+12:16:23.366 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner  -  Scanning for api listing references
+12:16:23.386 [main] INFO  com.study.VhrTestApplication  -  Started VhrTestApplication in 4.293 seconds (JVM running for 5.307)
+12:16:28.588 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:16:28.589 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:16:28.596 [http-nio-8991-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:16:28.596 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
+12:16:28.616 [http-nio-8991-exec-1] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 20 ms
+12:16:28.660 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:16:28.662 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.IndexController包
+12:16:28.662 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/login，ip地址为：0:0:0:0:0:0:0:1
+12:16:28.665 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:16:28.666 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:16:28.666 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:16:28.666 [http-nio-8991-exec-1] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:16:28.944 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  session id为：E9CA59A1CFB71B06FAFE3F44DAC173C7
+12:16:28.944 [http-nio-8991-exec-1] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/login
+12:16:29.036 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:16:29.036 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:16:29.060 [http-nio-8991-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]  -  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+java.lang.ClassCastException: org.springframework.web.servlet.resource.ResourceHttpRequestHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.study.config.Interceptor.HrInterceptor.preHandle(HrInterceptor.java:26)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:16:29.064 [http-nio-8991-exec-2] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:16:29.065 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  session id为：E9CA59A1CFB71B06FAFE3F44DAC173C7
+12:16:29.065 [http-nio-8991-exec-2] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:16:39.111 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:16:39.111 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:16:39.112 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：login，在该方法执行之前执行====
+12:16:39.130 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doBefore方法进入了====
+12:16:39.130 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  即将执行方法为: login，属于com.study.vhr.controller.TestController包
+12:16:39.130 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  用户请求的url为：http://localhost:8991/user/login，ip地址为：0:0:0:0:0:0:0:1
+12:17:22.690 [http-nio-8991-exec-4] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Starting...
+12:17:23.226 [http-nio-8991-exec-4] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Start completed.
+12:17:23.395 [http-nio-8991-exec-4] INFO  c.s.c.listener.MyHttpSessionListener  -  新用户上线
+12:17:31.578 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login执行完毕，返回参数为：login
+12:17:31.578 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  对返回参数进行业务上的增强：login增强版
+12:17:31.578 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  ====doAfter方法进入了====
+12:17:31.578 [http-nio-8991-exec-4] INFO  c.s.config.handler.LogAspectHandler  -  方法login已经执行完
+12:17:31.579 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染
+12:17:31.581 [http-nio-8991-exec-4] INFO  c.s.config.Interceptor.HrInterceptor  -  整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了
+12:17:31.581 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  session id为：E9CA59A1CFB71B06FAFE3F44DAC173C7
+12:17:31.581 [http-nio-8991-exec-4] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/user/login
+12:17:31.683 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request end
+12:17:31.683 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request域中保存的name值为：null
+12:17:31.685 [http-nio-8991-exec-6] INFO  c.s.config.Interceptor.HrInterceptor  -  ====拦截到了方法：error，在该方法执行之前执行====
+12:17:31.686 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  session id为：98DA8319F022ADFD9BC01BBB208C4A27
+12:17:31.686 [http-nio-8991-exec-6] INFO  c.s.c.l.MyServletRequestListener  -  request url为：http://localhost:8991/favicon.ico
+12:17:31.868 [SpringContextShutdownHook] INFO  c.s.c.listener.MyHttpSessionListener  -  用户下线
+12:17:31.876 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Shutdown initiated...
+12:17:31.889 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource  -  HikariPool-1 - Shutdown completed.
