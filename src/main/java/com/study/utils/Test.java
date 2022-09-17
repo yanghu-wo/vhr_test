@@ -18,6 +18,7 @@ public class Test {
 
     public static void main(String[] args) {
         BCrypt();
+        System.out.println("添加一个github分支测试！");
 
     }
 
