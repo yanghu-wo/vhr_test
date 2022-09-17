@@ -61,7 +61,7 @@ public class HrInterceptor implements HandlerInterceptor {
         if(is_true){
 //            String redisText = (String)redisTemplate.opsForValue().get("k10");
             stringRedisTemplate.opsForValue().set(redisID,password);
-//            System.out.println(redisText);
+            System.out.println("这是一次测试！！");
             return true;
         }
 
