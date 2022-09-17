@@ -49,6 +49,7 @@ public class LoginController {
     @RequestMapping("/logout")
     public String logout() {
         SecurityUtils.getSubject().logout();
+        System.out.println("退出系统！！");
         return "login";
     }
 
