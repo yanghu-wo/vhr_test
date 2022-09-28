@@ -17,7 +17,8 @@ public class Test {
 
 
     public static void main(String[] args) {
-        BCrypt();
+//        BCrypt();
+            getCode();
     }
 
     public static void BCrypt(){
@@ -36,4 +37,11 @@ public class Test {
         System.out.println(flag);
     }
 
+
+    public static void getCode(){
+        //获取验证码
+        CodeUtil codeUtil = new CodeUtil();
+        String generateVerifyCode = codeUtil.getString();
+        System.out.println(generateVerifyCode);
+    }
 }

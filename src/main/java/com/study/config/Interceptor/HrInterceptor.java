@@ -39,39 +39,42 @@ public class HrInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
+        // 获取请求url
+        String url = request.getRequestURL().toString();
+        // 获取请求ip
+        String ip = request.getRemoteAddr();
+        logger.info("用户请求的url为：{}，ip地址为：{}", url, ip);
 
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
         String methodName = method.getName();
+
         // @UnInterception 是我们自定义的注解
         UnInterception unInterception = method.getAnnotation(UnInterception.class);
         if(null != unInterception) {
             return true;
         }
+
         logger.info("====拦截到了方法：{}，在该方法执行之前执行====", methodName);
 
         String redisID = request.getRequestedSessionId()+"_"+request.getParameter("username");
-        System.out.println(redisID);
         String password = request.getParameter("password");
+        String verifyCode = request.getParameter("code").toLowerCase();
+
+        // 确认验证码
+        if(!verifyCode.equals(stringRedisTemplate.opsForValue().get("code"))){
+            logger.info("验证码错误！！");
+            return false;
+        }
+
         Hr hr = hrService.findOneHrByUserName(request.getParameter("username"));
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         Boolean is_true = passwordEncoder.matches(password,hr.getPassword());
         if(is_true){
-//            String redisText = (String)redisTemplate.opsForValue().get("k10");
-            stringRedisTemplate.opsForValue().set(redisID,password);
-            System.out.println("这是一次测试！！");
+            stringRedisTemplate.opsForValue().set(redisID,password,2000,TimeUnit.SECONDS);
             return true;
         }
-
-//        System.out.println(redisText);
-//        if(redisText == password){
-//            return true;
-//        }
-
-
-
         // 返回true才会继续执行，返回false则取消当前请求
         return false;
     }

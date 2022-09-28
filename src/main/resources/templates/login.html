@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:ty="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>登录页面</title>
@@ -8,7 +8,16 @@
 <form th:action="@{/user/login}" method="post">
     username:<input type="text" name="username"/><br>
     password:<input type="password" name="password"/><br>
+    <img id="captchaImage" style="height: 45px;width: 105px" class="captchaImage" onclick="changeImage(this)" src="/getCode">
+    <input type="text" placeholder="输入验证码" name="code" /><!-- 输入验证码文本 -->
     <input type="submit" value="登陆">
 </form>
 </body>
+<script>
+    function changeImage(img){
+        // ${pageContext.request.contextPath}
+        $("#captchaImage").attr({"src":"/getCode?w="+new Date().getTime()})
+    }
+</script>
+
 </html>

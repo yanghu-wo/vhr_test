@@ -11,13 +11,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @Description:
  * @Data: Create in 23:05 2022/9/16
  */
-//@EnableWebSecurity
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // 关闭 csrf
         http.csrf().disable();
         // 开启认证，URL格式登录必须是httpBasic
-        http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+//        http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
     }
 }
