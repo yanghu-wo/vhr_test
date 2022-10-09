@@ -24,8 +24,11 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(getHrInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/index")
-                .excludePathPatterns("/getCode");
+                .excludePathPatterns("/login")     // 登录界面
+                .excludePathPatterns("/user/login")  // 登录接口
+                .excludePathPatterns("/user/logout")    // 退出接口
+                .excludePathPatterns("/unauthorized") //失败跳转页面
+                .excludePathPatterns("/getCode");   // 获取验证码
         super.addInterceptors(registry);
     }
 

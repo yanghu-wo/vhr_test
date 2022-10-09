@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
@@ -39,15 +40,26 @@ public class HrInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        // 1、首先判断redis是否有信息，若有，直接放过，若无，进入下一步
+        // 1.1 用户信息 由 sessionId 和 用户 name 组合
+        /*String sessionID = request.getSession().getId();
+        String name = stringRedisTemplate.opsForValue().get(sessionID);
+        if(name != null){
+            // 1.2 如果redis中有该用户信息，跳过拦截，直接进入
+            return true;
+        }*/
+
+        // 2、判断方法是否为 添加了可忽略的 注解 方法
+        HandlerMethod handlerMethod = (HandlerMethod) handler;
+        Method method = handlerMethod.getMethod();
+        String methodName = method.getName();
+
         // 获取请求url
         String url = request.getRequestURL().toString();
         // 获取请求ip
         String ip = request.getRemoteAddr();
         logger.info("用户请求的url为：{}，ip地址为：{}", url, ip);
-
-        HandlerMethod handlerMethod = (HandlerMethod) handler;
-        Method method = handlerMethod.getMethod();
-        String methodName = method.getName();
+        logger.info("====拦截到了方法：{}，在该方法执行之前执行====", methodName);
 
         // @UnInterception 是我们自定义的注解
         UnInterception unInterception = method.getAnnotation(UnInterception.class);
@@ -55,26 +67,28 @@ public class HrInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        logger.info("====拦截到了方法：{}，在该方法执行之前执行====", methodName);
-
-        String redisID = request.getRequestedSessionId()+"_"+request.getParameter("username");
+        // 3、判断用户当前权限，是否能够进行当前操作
         String password = request.getParameter("password");
-        String verifyCode = request.getParameter("code").toLowerCase();
-
-        // 确认验证码
-        if(!verifyCode.equals(stringRedisTemplate.opsForValue().get("code"))){
-            logger.info("验证码错误！！");
+        String userName = request.getParameter("username");
+        String redisID = request.getSession().getId() +"_"+userName;
+        // 3.1 判断是否有用户信息，若有，进入
+        if(password != null&& userName != null){
+            // 3.1.1 根据用户名获取数据库中 hr 信息，并与用户密码比对
+            Hr hr = hrService.findOneHrByUserName(request.getParameter("username"));
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(); // 获取加密文本
+            Boolean isMatchPassword = passwordEncoder.matches(password,hr.getPassword()); // 匹配密码
+            if(isMatchPassword){
+                stringRedisTemplate.opsForValue().set(redisID,password,2000,TimeUnit.SECONDS);
+                return true;
+            }
+            // 3.1.2 如果密码不匹配
+            request.getSession().setAttribute("error","用户名或密码错误！！！");
+            response.sendRedirect("/login");
             return false;
         }
+        // request.getRequestedSessionId() 与 request.getSession().getId()有区别
+        // 前者获取每次请求sessionId 会变，后者为浏览器sessionId不变
 
-        Hr hr = hrService.findOneHrByUserName(request.getParameter("username"));
-
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        Boolean is_true = passwordEncoder.matches(password,hr.getPassword());
-        if(is_true){
-            stringRedisTemplate.opsForValue().set(redisID,password,2000,TimeUnit.SECONDS);
-            return true;
-        }
         // 返回true才会继续执行，返回false则取消当前请求
         return false;
     }

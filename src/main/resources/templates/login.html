@@ -5,6 +5,7 @@
     <title>登录页面</title>
 </head>
 <body>
+<span th:if="${session.error}" th:text="${session.error}"></span>
 <form th:action="@{/user/login}" method="post">
     username:<input type="text" name="username"/><br>
     password:<input type="password" name="password"/><br>
@@ -18,6 +19,8 @@
         // ${pageContext.request.contextPath}
         $("#captchaImage").attr({"src":"/getCode?w="+new Date().getTime()})
     }
+
+
 </script>
 
 </html>
