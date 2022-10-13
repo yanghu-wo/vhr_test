@@ -1,26 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" class="no-js" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>登录页面</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>登录</title>
+	<link rel="shortcut icon" href="#" />
+<link rel="stylesheet" type="text/css" th:href="@{../static/css/normalize.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{../static/css/demo.css}" />
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" th:href="@{../static/css/component.css}" />
+<!--[if IE]>
+<script th:src="@{../static/js/html5.js}"></script>
+<![endif]-->
 </head>
 <body>
-<span th:if="${session.error}" th:text="${session.error}"></span>
-<form th:action="@{/user/login}" method="post">
-    username:<input type="text" name="username"/><br>
-    password:<input type="password" name="password"/><br>
-    <img id="captchaImage" style="height: 45px;width: 105px" class="captchaImage" onclick="changeImage(this)" src="/getCode">
-    <input type="text" placeholder="输入验证码" name="code" /><!-- 输入验证码文本 -->
-    <input type="submit" value="登陆">
-</form>
-</body>
-<script>
-    function changeImage(img){
-        // ${pageContext.request.contextPath}
-        $("#captchaImage").attr({"src":"/getCode?w="+new Date().getTime()})
-    }
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<div class="logo_box">
+						<div ></div>
+						<h3>欢迎你</h3>
+						<form th:action="@{/toLogin}" name="f" method="post">
+							<p style="color:red;"  th:text="${failMsg}" th:if="${not #strings.isEmpty(failMsg)}"></p>
+							<div class="input_outer">
+								<span class="u_user"></span>
+								<input name="username" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户" >
+							</div>
+							<div class="input_outer" >
+								<span class="us_uer"></span>
+								<input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+							</div>
+							<div class="input_outer">
+								<span class="us_uer"></span>
+								<input name="code" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100; width: 60%;" value="" type="text" placeholder="请输入验证码" autocomplete="off">
+								<img id="captchaImage" style="height: 42px;width: 105px; float:right; border-radius:0 13px 13px 0;" class="captchaImage" onclick="changeImage(this)" src="/getCode">
+							</div>
+							<div class="mb2">
+								<input class="act-but submit" type="submit" value="登录" style="color: #FFFFFF; width: 100%; border: none;">
+							</div>
 
-
-</script>
-
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script>
+			function changeImage(img){
+				// ${pageContext.request.contextPath}
+				$("#captchaImage").attr({"src":"/getCode?w="+new Date().getTime()})
+			}
+		</script>
+		<script th:src="@{../static/js/TweenLite.min.js}"></script>
+		<script th:src="@{../static/js/EasePack.min.js}"></script>
+		<script th:src="@{../static/js/rAF.js}"></script>
+		<script th:src="@{../static/js/demo-1.js}"></script>
+	</body>
 </html>

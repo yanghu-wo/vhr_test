@@ -3,6 +3,7 @@ package com.study.config.Interceptor;
 import com.study.config.accnotation.UnInterception;
 import com.study.vhr.entity.Hr;
 import com.study.vhr.service.IHrService;
+import com.study.vhr.service.impl.HrServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -49,7 +52,7 @@ public class HrInterceptor implements HandlerInterceptor {
             return true;
         }*/
 
-        // 2、判断方法是否为 添加了可忽略的 注解 方法
+        // 1、判断方法是否为 添加了可忽略的 注解 方法
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
         String methodName = method.getName();
@@ -67,8 +70,36 @@ public class HrInterceptor implements HandlerInterceptor {
             return true;
         }
 
+        // 2、判断浏览器 会话中是否有用户的关联信息
+        String userSession = (String)request.getSession().getAttribute("user_session");
+
+        if (userSession != null) {
+            HashMap<String,String> onlineUsers = HrServiceImpl.getOnlineUsers();
+            String curSid = request.getSession().getId();
+            String userInfo = userSession.split("_")[1]+"_"+userSession.split("_")[2];
+
+            String onlineSid = onlineUsers.get(userInfo);
+
+//            System.out.println(onlineSid);
+//            System.out.println("登录会话id : "+userSession);
+
+            if (onlineSid != null && !curSid.equals(onlineSid)) {
+                request.setAttribute("failMsg","您的账号已在别处登录，请重新登陆或修改密码！");
+                request.getRequestDispatcher("login").forward(request,response);
+                return false;
+            }else {
+                System.out.println("测试一下！！");
+                //这种情况session还没过期，账号又还是活跃状态，此时应该更新本账号的登录时间
+                long curTime = new Date().getTime();
+                onlineUsers.put(userInfo + "_loginTime","" + curTime/1000);
+                return true;
+            }
+        }
+        request.getRequestDispatcher("login").forward(request,response);
+        return false;
+
         // 3、判断用户当前权限，是否能够进行当前操作
-        String password = request.getParameter("password");
+       /* String password = request.getParameter("password");
         String userName = request.getParameter("username");
         String redisID = request.getSession().getId() +"_"+userName;
         // 3.1 判断是否有用户信息，若有，进入
@@ -85,12 +116,12 @@ public class HrInterceptor implements HandlerInterceptor {
             request.getSession().setAttribute("error","用户名或密码错误！！！");
             response.sendRedirect("/login");
             return false;
-        }
+        }*/
         // request.getRequestedSessionId() 与 request.getSession().getId()有区别
         // 前者获取每次请求sessionId 会变，后者为浏览器sessionId不变
 
         // 返回true才会继续执行，返回false则取消当前请求
-        return false;
+
     }
 
     @Override

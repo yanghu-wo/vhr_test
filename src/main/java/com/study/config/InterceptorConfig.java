@@ -25,10 +25,10 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(getHrInterceptor()).addPathPatterns("/**")
                 .excludePathPatterns("/login")     // 登录界面
-                .excludePathPatterns("/user/login")  // 登录接口
-                .excludePathPatterns("/user/logout")    // 退出接口
+                .excludePathPatterns("/toLogin")  // 登录接口
+                .excludePathPatterns("/logout")    // 退出接口
                 .excludePathPatterns("/unauthorized") //失败跳转页面
-                .excludePathPatterns("/getCode");   // 获取验证码
+                .excludePathPatterns("/getCode");  // 获取验证码
         super.addInterceptors(registry);
     }
 

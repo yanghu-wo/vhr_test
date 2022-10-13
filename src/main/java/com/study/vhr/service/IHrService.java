@@ -2,10 +2,15 @@ package com.study.vhr.service;
 
 import com.study.vhr.entity.Hr;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Set;
 
 public interface IHrService {
+
+
+    int validateLogin(Hr hr, HttpSession session);
+
     /* 1、增加--------------------------------------------*/
     int insertHr(Hr hr);
 

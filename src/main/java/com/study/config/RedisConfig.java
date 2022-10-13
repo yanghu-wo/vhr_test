@@ -15,7 +15,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @Data: Create in 18:00 2022/9/7
  */
 //@Configuration
-//@EnableCaching
 public class RedisConfig {
 
     @Bean
